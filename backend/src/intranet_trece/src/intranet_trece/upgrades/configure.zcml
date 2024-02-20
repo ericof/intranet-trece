@@ -29,4 +29,18 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="intranet_trece:default"
+      source="20240220001"
+      destination="20240220002"
+      >
+    <genericsetup:upgradeDepends
+        title="Altera workflows e fecha a intranet"
+        import_steps="workflow"
+        />
+    <upgradeStep
+        title="Atualiza o permissionamento com o novo workflow"
+        handler=".workflow.atualiza_permissoes"
+        />
+  </genericsetup:upgradeSteps>
 </configure>
