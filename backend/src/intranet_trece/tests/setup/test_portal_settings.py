@@ -1,24 +1,27 @@
 from plone import api
+from typing import Any
 
+import pytest
 
-class TestPortalProperties:
+class TestPortalSettings:
 
-    def test_portal_title(self, portal):
-        expected = "Nova Intranet TRE-CE"
-        value = api.portal.get_registry_record("plone.site_title")
-        assert value == expected, f"Value '{value}' is not equal '{expected}'"
-
-    def test_portal_timezone(self, portal):
-        expected = "America/Fortaleza"
-        value = api.portal.get_registry_record("plone.portal_timezone")
-        assert value == expected, f"Value '{value}' is not equal '{expected}'"
-
-    def test_portal_sitemap(self, portal):
-        expected = True
-        value = api.portal.get_registry_record("plone.enable_sitemap")
-        assert value is expected, f"Value '{value}' is not '{expected}'"
-
-    def test_portal_email_from_name(self, portal):
-        expected = "Nova Intranet TRE-CE"
-        value = api.portal.get_registry_record("plone.email_from_name")
-        assert value == expected, f"Value '{value}' is not equal '{expected}'"
+    @pytest.mark.parametrize(
+        "setting,expected",
+        [
+            ["plone.site_title", "Nova Intranet TRE-CE"],
+            ["plone.portal_timezone", "America/Fortaleza"],
+            ["plone.enable_sitemap", True],
+            ["plone.email_charset", "utf-8"],
+            ["plone.email_from_name", "Nova Intranet TRE-CE"],
+            ["plone.email_from_address", "intranet@tre-ce.jus.br"],
+            ["plone.smtp_host", "localhost"],
+            ["plone.smtp_port", 25],
+            ["plone.default_language", "pt-br"],
+            ["plone.twitter_username", "ericof"],
+        ]
+    )
+    def test_portal_settings(self, portal, setting: str, expected: Any):
+        value = api.portal.get_registry_record(setting)
+        assert value == expected, (
+            f"Valor incorreto para {setting}: {value} ao invés de {expected}"
+        )
