@@ -1,0 +1,54 @@
+[
+  {
+    "_parent": "",
+    "type": "Document",
+    "id": "images",
+    "title": "Images",
+    "description": "Image bank.",
+    "_transitions": [
+      "publish"
+    ],
+    "_allowed_types": [
+      "Image"
+    ],
+    "exclude_from_nav": true
+  },
+  {
+    "_parent": "images",
+    "type": "Image",
+    "id": "plone-foundation.png",
+    "title": "Plone Foundation",
+    "description": "",
+    "_image": "images/plone-foundation.png",
+    "_transitions": [],
+    "exclude_from_nav": false
+  },
+  {
+    "_parent": "",
+    "type": "Document",
+    "id": "estrutura",
+    "title": "Estrutura",
+    "description": "Estrutura do TRE-CE",
+    "_transitions": [
+      "publish"
+    ],
+    "_allowed_types": [
+      "Area"
+    ],
+    "exclude_from_nav": false
+  },
+  {
+    "_parent": "",
+    "type": "Document",
+    "id": "colaboradores",
+    "title": "Colaboradores",
+    "description": "Colaboradores do TRE-CE",
+    "_transitions": [
+      "publish"
+    ],
+    "_allowed_types": [
+      "Pessoa"
+    ],
+    "exclude_from_nav": false
+  }
+]

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<registry>
+  <records interface="plone.base.interfaces.controlpanel.ISiteSchema" prefix="plone" purge="false">
+    <value key="enable_sitemap">True</value>
+    <value key="exposeDCMetaTags">True</value>
+    <value key="roles_allowed_to_add_keywords">
+      <element>Manager</element>
+      <element>Site Administrator</element>
+      <element>Reviewer</element>
+    </value>
+    <value key="site_title">Nova Intranet TRE-CE</value>
+    <value key="toolbar_position">top</value>
+  </records>
+</registry>

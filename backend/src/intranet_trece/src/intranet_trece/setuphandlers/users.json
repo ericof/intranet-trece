@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "ericof@plone.org",
+      "properties": {
+        "fullname": "Intranet TRE-CE",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "intranet-trece"
+    }
+  ],
+    "team": [
+  ]
+}
