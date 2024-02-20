@@ -5,9 +5,7 @@
     "id": "images",
     "title": "Images",
     "description": "Image bank.",
-    "_transitions": [
-      "publish"
-    ],
+    "_transitions": [],
     "_allowed_types": [
       "Image"
     ],
@@ -29,12 +27,8 @@
     "id": "estrutura",
     "title": "Estrutura",
     "description": "Estrutura do TRE-CE",
-    "_transitions": [
-      "publish"
-    ],
-    "_allowed_types": [
-      "Area"
-    ],
+    "_transitions": [],
+    "_allowed_types": ["Area"],
     "exclude_from_nav": false
   },
   {
@@ -43,9 +37,7 @@
     "id": "colaboradores",
     "title": "Colaboradores",
     "description": "Colaboradores do TRE-CE",
-    "_transitions": [
-      "publish"
-    ],
+    "_transitions": [],
     "_allowed_types": [
       "Pessoa"
     ],
