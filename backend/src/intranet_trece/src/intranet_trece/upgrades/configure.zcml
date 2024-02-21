@@ -85,4 +85,15 @@
         handler=".v20240221002.alterar_permissionamento_estrutura"
         />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="intranet_trece:default"
+      source="20240221002"
+      destination="20240221003"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona behavior intranet_trece.contact_info aos tipos Area e Pessoa"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
 </configure>
