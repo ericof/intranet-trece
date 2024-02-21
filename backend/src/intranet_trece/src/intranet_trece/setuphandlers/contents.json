@@ -38,6 +38,14 @@
     "title": "Colaboradores",
     "description": "Colaboradores do TRE-CE",
     "_transitions": [],
+    "_permissions": {
+      "intranet_trece: Add Pessoa": [
+        "Site Administrator",
+        "Manager",
+        "Editor",
+        "Contributor"
+      ]
+    },
     "_allowed_types": [
       "Pessoa"
     ],
