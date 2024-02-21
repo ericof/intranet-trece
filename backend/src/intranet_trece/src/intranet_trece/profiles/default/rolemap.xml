@@ -4,5 +4,8 @@
     <permission acquire="False"
                 name="intranet_trece: Add Pessoa"
     />
+    <permission acquire="False"
+                name="intranet_trece: Add Area"
+    />
   </permissions>
 </rolemap>

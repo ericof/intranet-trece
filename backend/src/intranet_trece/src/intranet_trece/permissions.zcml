@@ -9,6 +9,10 @@
         id="intranet_trece.pessoa.add"
         title="intranet_trece: Add Pessoa"
         />
+    <permission
+        id="intranet_trece.area.add"
+        title="intranet_trece: Add Area"
+        />
 
   </configure>
 
