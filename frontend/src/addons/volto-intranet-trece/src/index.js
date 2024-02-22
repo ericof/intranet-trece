@@ -9,6 +9,9 @@ import PessoaView from './components/View/PessoaView';
 // Icones
 import climaSVG from '@plone/volto/icons/cloud.svg';
 
+// reducers
+import { climaData } from './reducers/climaData';
+
 const applyConfig = (config) => {
   config.settings = {
     ...config.settings,
@@ -48,6 +51,12 @@ const applyConfig = (config) => {
     Area: AreaView,
     Pessoa: PessoaView,
   };
+
+  config.addonReducers = {
+    ...config.addonReducers,
+    climaData,
+  };
+
   return config;
 };
 
