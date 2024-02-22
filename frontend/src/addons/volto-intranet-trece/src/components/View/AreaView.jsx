@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Table } from 'semantic-ui-react';
 
 /**
  * AreaView view component class.
@@ -22,6 +23,44 @@ const AreaView = (props) => {
       </header>
       <div>
         <p className="description documentDescription">{content.description}</p>
+      </div>
+      <div>
+        <Table celled padded>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell singleLine>Contato</Table.HeaderCell>
+              <Table.HeaderCell></Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>Tipo de E-mail</Table.Cell>
+              <Table.Cell singleLine>
+                {content.tipo_email ? (
+                  <span>{content.tipo_email.title}</span>
+                ) : (
+                  ''
+                )}
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>E-mail</Table.Cell>
+              <Table.Cell singleLine>
+                {content.email ? (
+                  <a href={`mailto: ${content.email}`}>{content.email}</a>
+                ) : (
+                  ''
+                )}
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>Ramal</Table.Cell>
+              <Table.Cell singleLine>
+                {content.ramal ? content.ramal : '-'}
+              </Table.Cell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
       </div>
     </div>
   );
