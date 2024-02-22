@@ -111,4 +111,15 @@
         handler=".v20240222001.reindexa_pessoa"
         />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="intranet_trece:default"
+      source="20240222001"
+      destination="20240222002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona filtro por Área"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
 </configure>
